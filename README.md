@@ -44,8 +44,8 @@ Things you may want to cover:
 |------|----|-------| 
 |text|text|
 |image|string|
-|user_id|integer|null: false, foreign_key: true| 
-|group_id|integer|null: false, foreign_key: true| 
+|user|references|null: false, foreign_key: true| 
+|group|references|null: false, foreign_key: true| 
   
 ### Association 
 - belongs_to :user 

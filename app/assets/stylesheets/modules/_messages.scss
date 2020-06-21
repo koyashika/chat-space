@@ -14,7 +14,23 @@
 .user-name{
     background-color: #253141;
     height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
+  .top-items {
+    background-color: #d8d8d8;
+    height: 20px;
+    width: 200px;
+    display: flex;
+    justify-content: space-between; 
+  }
+    .name {
+
+    }
+    .icon {
+     width: 60px; 
+    }
 .group-list{
     background-color: #2f3e51;
     height: calc(100% - 100px);
@@ -38,3 +54,5 @@
   background-color: #d2d2d2;
   height: 90px;
 }
+
+

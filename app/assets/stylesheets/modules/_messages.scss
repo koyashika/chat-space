@@ -19,18 +19,26 @@
     align-items: center;
   }
   .top-items {
-    background-color: #d8d8d8;
     height: 20px;
     width: 200px;
     display: flex;
     justify-content: space-between; 
   }
     .name {
-
+    color: #ffffff;
+    font-size: 16px;
     }
     .icon {
-     width: 60px; 
+     width: 60px;
+     color: #ffffff;
     }
+    .Contents__btn--icon {
+      color: #ffffff;
+      border-style: none;
+      text-align: right;
+      margin-right: 5px;
+    }
+
 .group-list{
     background-color: #2f3e51;
     height: calc(100% - 100px);

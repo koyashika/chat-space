@@ -8,7 +8,7 @@
 
 .Side-ber {
   width: 300px;
-  height: 100%;
+  height: 100vh;
 
   .user-name{
     background-color: #253141;
@@ -33,11 +33,11 @@
         color: #ffffff;
       }
       
-      .Contents__btn--icon {
+      .btn-icon {
         color: #ffffff;
         border-style: none;
         text-align: right;
-         margin-right: 5px;
+        margin-left: 5px;
       }
     }
   }
@@ -45,12 +45,12 @@
 
 .group-list {
   background-color: #2f3e51;
-  height: calc(100% - 100px);
+  height: calc(100vh - 100px);
   color: #ffffff;
 
   .name {
     font-size: 15px;
-    margin: 20px 20px 5px 20px;
+    padding: 20px 20px 5px 20px;
   }
   .message {
     font-size: 11px;
@@ -61,7 +61,7 @@
 .Chat-main {
   background-color: #ffffff;
   width: calc(100% - 300px);
-  height: 100%;
+  height: 100vh;
 
   .group-info {
     background-color: #ffffff;
@@ -70,7 +70,7 @@
   }
   .message-list   {
     background-color: #fafafa;
-    height: calc(100% - 190px);
+    height: calc(100vh - 190px);
   }
   .message-form {
     background-color: #d2d2d2;

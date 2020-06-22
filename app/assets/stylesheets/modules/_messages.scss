@@ -108,4 +108,31 @@
     background-color: #d2d2d2;
     height: 90px;
   }
+
+  .message-list {
+    .message-box {
+      padding-top: 35px;
+      .message-info {
+        display: flex;
+
+        .user-name {
+          color: #333333;
+          font-size: 16px;
+          margin: 0 0 12px 40px;
+        }
+        .post-data{
+          color: #999999;
+          font-size: 12px;
+          margin-left: 10px;
+        } 
+      }
+      .message{
+        .message-contents {
+          color: #434A54;
+          font-size: 14px;
+          padding: 0 0 46px 40px;
+        } 
+      }
+    }
+  }
 }

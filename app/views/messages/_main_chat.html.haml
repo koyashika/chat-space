@@ -14,3 +14,11 @@
       .message
         .message-contents おはよう！
   .message-form
+    %form.new-message
+      .input-box
+        %input{type: "text", class: "text", placeholder: "type a message"}
+        %label{class: "image",}
+          = icon("fas","image")
+          %input{type: "file", class: "file"}
+        %input{type: "submit", class: "submit-btn",value: "Send"}
+    

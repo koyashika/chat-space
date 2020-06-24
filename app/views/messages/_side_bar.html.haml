@@ -1,15 +1,18 @@
 .Side-ber
-  .user-name
-    .top-items
-      .name masa
-      .icon
+  .User-name
+    .Top-items
+      .Top-items__name
+        masa
+      .Top-items__icon
         = link_to "#" do
-          = icon('far', 'edit', class: "btn-icon" )  
+          = icon('far', 'edit', class: "Top-items__btn-icon" )  
           %span<>
         = link_to "#" do
-          = icon('fas', 'book-open', class: "btn-icon" )  
-  .group-list
-    .name techcamp
-    .message まだメッセージがありません
+          = icon('fas', 'book-open', class: "Top-items__btn-icon" )  
+  .Group-list
+    .Group-list__name
+      techcamp
+    .Group-list__message
+      まだメッセージがありません
   
   

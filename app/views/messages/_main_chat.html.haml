@@ -1,24 +1,29 @@
 .Chat-main
-  .group-info
-    %ul.chat-name
-      %li.group-name test
-      %li.member-name  Member:masa
-    .edit-group
+  .Group-info
+    %ul.Group-info__chat-name
+      %li.Group-info__chat-name__group-name
+        test
+      %li.Group-info__chat-name__member-name 
+        Member:masa
+    .Group-info__edit-group
       = link_to "#" do
         Edit  
-  .message-list
-    .message-box
-      .message-info
-        .user-name masa
-        .post-data 2019/11/20(Wed)17:43:01
-      .message
-        .message-contents おはよう！
-  .message-form
-    %form.new-message
-      .input-box
-        %input{type: "text", class: "text", placeholder: "type a message"}
-        %label{class: "image",}
+  .Message-list
+    .Message-box
+      .Message-box__message-info
+        .Message-box__message-info__user-name
+          masa
+        .Message-box__message-info__post-data
+          2019/11/20(Wed)17:43:01
+      .Message-box__message
+        .Message-box__message__message-contents
+          おはよう！
+  .Message-form
+    %form.New-message
+      .Input-box
+        %input{type: "text", class: "Input-box__text", placeholder: "type a message"}
+        %label{class: "Input-box__image",}
           = icon("fas","image")
-          %input{type: "file", class: "file"}
-        %input{type: "submit", class: "submit-btn",value: "Send"}
+          %input{type: "file", class: "Input-box__image__file"}
+        %input{type: "submit", class: "Input-box__submit-btn",value: "Send"}
     

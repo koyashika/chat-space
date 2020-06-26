@@ -4,6 +4,8 @@ class GroupsController < ApplicationController
   @group.users << current_user
  end
 
+ def index
+ end
 
  def create
     @group = Group.new(group_params)
@@ -25,6 +27,8 @@ class GroupsController < ApplicationController
     else
       render :edit
     end
+  end
+  
   private
   def group_params
     params.require(:group).permit(:name, user_ids: [])

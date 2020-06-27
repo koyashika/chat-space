@@ -2,24 +2,16 @@
   .Group-info
     %ul.Group-info__chat-name
       %li.Group-info__chat-name__group-name
-        test
+        group1
       %li.Group-info__chat-name__member-name 
-        Member:masa
+        Member:hoge
     .Group-info__edit-group
       = link_to "#" do
         Edit  
   .Message-list
-    .Message-box
-      .Message-box__message-info
-        .Message-box__message-info__user-name
-          masa
-        .Message-box__message-info__post-data
-          2019/11/20(Wed)17:43:01
-      .Message-box__message
-        .Message-box__message__message-contents
-          おはよう！
+    = render @messages
   .Message-form
-    %form.New-message
+    .New-message
       = form_with model: [@group, @message], html: {class: "Form"}, local: true do |f|
         .Form__input-box
           = f.text_field :content, class: 'Form__input-box__text', placeholder: 'type a message'

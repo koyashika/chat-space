@@ -20,10 +20,10 @@
           おはよう！
   .Message-form
     %form.New-message
-      .Input-box
-        %input{type: "text", class: "Input-box__text", placeholder: "type a message"}
-        %label{class: "Input-box__image",}
-          = icon("fas","image")
-          %input{type: "file", class: "Input-box__image__file"}
-        %input{type: "submit", class: "Input-box__submit-btn",value: "Send"}
-    
+      = form_with model: [@group, @message], html: {class: "Form"}, local: true do |f|
+        .Form__input-box
+          = f.text_field :content, class: 'Form__input-box__text', placeholder: 'type a message'
+          = f.label :image, class: 'Form__input-box__image' do
+            = icon("fas","image", class: 'Form__input-box__icon')
+            = f.file_field :image, class: 'Form__input-box__image__file'
+          = f.submit 'Send', class: 'Form__input-box__submit-btn'

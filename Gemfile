@@ -5,6 +5,8 @@ ruby '2.6.5'
 
 gem 'devise'
 gem 'pry-rails'
+gem 'carrierwave'
+gem 'mini_magick'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.0'

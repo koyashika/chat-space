@@ -2,12 +2,14 @@
   .Group-info
     %ul.Group-info__chat-name
       %li.Group-info__chat-name__group-name
-        group1
+        = @group.name
       %li.Group-info__chat-name__member-name 
-        Member:hoge
+        Member：
+        - @group.users.each do |user|
+          = user.name
     .Group-info__edit-group
-      = link_to edit_group_path(current_user) do
-        Edit  
+      = link_to edit_group_path(@group) do
+        Edit
   .Message-list
     = render @messages
   .Message-form

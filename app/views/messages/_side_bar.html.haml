@@ -4,10 +4,10 @@
       .Top-items__name
         = current_user.name
       .Top-items__icon
-        = link_to new_group_path(current_user) do
+        = link_to new_group_path do
           = icon('far', 'edit', class: "Top-items__btn-icon" )  
           %span<>
-        = link_to edit_user_path(current_user) do 
+        = link_to edit_user_path(current_user) do
           = icon('fas', 'book-open', class: "Top-items__btn-icon" )  
   .Group-list
     - current_user.groups.each do |group|

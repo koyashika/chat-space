@@ -26,7 +26,6 @@ def new
       redirect_to group_messages_path(@group), notice: "グループを更新しました"
     else
       render :edit
-      redirect_to edit_group_path(@group)
     end
   end
   

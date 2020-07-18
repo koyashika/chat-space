@@ -57,6 +57,7 @@ $(function(){
       $('.Message-list').append(html);      
       $('form')[0].reset();
       $('.Message-list').animate({ scrollTop: $('.Message-list')[0].scrollHeight});
+      $('.Form__input-box__submit-btn').prop('disabled', false);
     })
   });
 });

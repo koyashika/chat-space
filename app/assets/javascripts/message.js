@@ -7,7 +7,7 @@ $(function(){
             <div class="Message-box__message-info__user-name">
               ${message.user_name}
             </div>
-            <div class="Message-box__message-info__post-date">
+            <div class="Message-box__message-info__post-data">
               ${message.created_at}
             </div>
           </div>

@@ -21,7 +21,7 @@ $(function(){
       return html;
     } else {
       let html =
-      `<div class="Message-box__Message-box" data-message-id=${message.id}>
+      `<div class="Message-box" data-message-id=${message.id}>
         <div class="Message-box__message-info">
             <div class="Message-box__message-info__user-name">
             ${message.user_name}

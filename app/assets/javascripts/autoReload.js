@@ -26,7 +26,7 @@ $(function(){
           <div class="Message-box__message-info__user-name">
             ${message.user_name}
           </div>
-          <div class="Message-box__message-info__post-date">
+          <div class="Message-box__message-info__post-data">
             ${message.created_at}
           </div>
         </div>
@@ -42,7 +42,7 @@ $(function(){
 
   let reloadMessages = function() {
     //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
-    let last_message_id = $('.MessageBox:last').data("message-id") || 0;
+    let last_message_id = $('.Message-box:last').data("message-id") || 0;
     $.ajax({
       //ルーティングで設定した通り/groups/id番号/api/messagesとなるよう文字列を書く
       url: "api/messages",
@@ -62,8 +62,8 @@ $(function(){
           insertHTML += buildHTML(message)
         });
         //メッセージが入ったHTMLに、入れ物ごと追加
-        $('.MessageField').append(insertHTML);
-        $('.MessageField').animate({ scrollTop: $('.MessageField')[0].scrollHeight});
+        $('.Message-list').append(insertHTML);
+        $('.Message-list').animate({ scrollTop: $('.Message-list')[0].scrollHeight});
       }
     })
     .fail(function() {

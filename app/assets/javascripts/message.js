@@ -2,7 +2,7 @@ $(function(){
   function buildHTML(message){
     if ( message.image ) {
       let html =
-        `<div class="Message-box">
+        `<div class="Message-box" data-message-id=${message.id}>
           <div class="Message-box__message-info">
             <div class="Message-box__message-info__user-name">
               ${message.user_name}
@@ -21,7 +21,7 @@ $(function(){
       return html;
     } else {
       let html =
-      `<div class="Message-box__Message-box">
+      `<div class="Message-box__Message-box" data-message-id=${message.id}>
         <div class="Message-box__message-info">
             <div class="Message-box__message-info__user-name">
             ${message.user_name}
@@ -76,7 +76,17 @@ $(function(){
       data: {id: last_message_id}
     })
     .done(function(messages) {
-      console.log('success');
+      // 更新するメッセージがなかった場合は.doneの後の処理が動かないようにする
+      if (messages.length !== 0) {
+        //追加するHTMLの入れ物を作る
+        let insertHTML = '';
+        //配列messagesの中身一つ一つを取り出し、HTMLに変換したものを入れ物に足し合わせる
+        $.each(messages, function(i, message) {
+          insertHTML += buildHTML(message)
+        });
+        //メッセージが入ったHTMLに、入れ物ごと追加
+        $('.MessageField').append(insertHTML);
+      }
     })
     .fail(function() {
       alert('error');
